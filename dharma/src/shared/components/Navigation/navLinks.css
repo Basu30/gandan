@@ -1,0 +1,54 @@
+.login{
+    width: 80%;
+    height: 30px;
+    background-color: rgb(12, 80, 239);
+    border-radius: 10%;
+    text-align: center;
+    font-size: medium;
+    padding:0px;
+    margin-top: 5px;
+}
+
+.nav-control {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    
+}
+
+.home-container {
+    margin:10px;
+    text-decoration: none;
+    background-color: rgb(210, 210, 35);
+    text-align: center;
+    border-radius: 5px;
+    padding: 4px;
+  
+}
+.home-container:hover{
+    color:bisque
+}
+
+.addNews-container {
+    background-color: rgb(210, 210, 35);
+    text-align: center;
+    border-radius: 5px;
+    padding: 0px 40px 0px 40px;
+    margin:10px;
+    box-shadow: 0px 0px 2px 1px;
+}
+
+.updateNews-container {
+    background-color: rgb(210, 210, 35);
+    text-align: center;
+    border-radius: 5px;
+    padding:  0px 40px 0px 40px;
+    margin:10px;
+    box-shadow: 0px 0px 2px 1px;
+}
+
+.login-button {
+    width: 80%;
+}

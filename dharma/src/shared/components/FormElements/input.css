@@ -1,0 +1,21 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+
+.form-container input[type=email], input[type=current-password] {
+    width: 100%;
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.container-u-p {
+    padding: 25px;
+}
