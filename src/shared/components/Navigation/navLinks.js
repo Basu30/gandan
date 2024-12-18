@@ -19,16 +19,16 @@ const NavLinks = () => {
       
       {auth.isLoggedIn &&
       
-      <NavLink to='/news'>
+      <NavLink to='/news' style={{textDecoration: 'none'}}>
         <div className='addNews-container'>
-        Add News
+         <p style={{margin: '0px'}}>Мэдээ нэмэх</p>
         </div>
       </NavLink>}
       {auth.isLoggedIn && 
       
-      <NavLink to='/update'>
+      <NavLink to='/update' style={{textDecoration:'none'}}>
         <div className='updateNews-container'>
-        <span style={{textDecoration:'none'}}>Edit News</span>
+        <p >Засварлах</p>
         </div>
       </NavLink> }
      

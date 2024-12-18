@@ -10,38 +10,62 @@ button {
     cursor: pointer;
     width: 100%;
 }
+.h-1 {
+    text-align: center;
+    margin: 0px 5px 5px 0px;
+    padding: 10px;
 
-.container {
+}
+.user-container {
     height: 70vh;
     align-items: center;
     justify-content: center;
     display: flex;
     position: relative;
-    display: flex;
-    padding: 20px
 
 }
 .login-form {
     background-color:rgb(206, 206, 206);
     position:absolute;
-    /* width: 500px; */
+    width: 500px;
     border-radius: 5px; 
     box-shadow:10px 10px 15px rgba(0, 0, 0, 1.1);
-    /* border: 1px solid black */
 }
 
-.img-container {
+.signup-img-container {
     justify-content: center;
     display:flex;
 }
 
 .picture {
   width: 100%;
+  height: 20vh;
   border-radius: 5px 5px 0px 0px;
   margin: 0px
 }
 
+.form-signup {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
 
-.create-user {
+
+input[type=text], input[type=new-password], input[type=email] {
+    width: 100%;
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.signup-u-p {
+    padding: 25px;
+}
+
+.already-user {
     text-align:center;
+    margin-top: 10px;
 }

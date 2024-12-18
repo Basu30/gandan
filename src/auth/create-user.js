@@ -36,7 +36,7 @@ const CreateUser = () => {
       <div className='login-form'>
         
         {/* Image */}
-        <div className='img-container'>
+        <div className='signup-img-container'>
           <img src="image\wheel.jpg" alt="gate" className='picture'/>
         </div>
         
