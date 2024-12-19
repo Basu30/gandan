@@ -6,3 +6,12 @@
 /* .ccc-c {
     background-color: black;
 } */
+
+@media (max-width: 600px) {
+    .items {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+}

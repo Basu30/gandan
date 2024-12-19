@@ -44,7 +44,6 @@
 }
 
 .nav-title-container p {
-
   font-size: 40px;
   font-style:italic;
   margin-top: 0px;
@@ -68,6 +67,11 @@
 }
 
 @media (max-width: 768px) {
+  .main-nav-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
   .nav-title-container h1{
     font-size: larger;
     line-height: 1.0;
