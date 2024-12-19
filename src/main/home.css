@@ -71,24 +71,7 @@ img{
     .section-2 {
         width: 100%;
     }
-    .menu-controller {
-        position: relative;
-        display: inline-block;
-    }
-    .mmm-m {
-        /* display: flex;  
-        text-align: left;
-        margin: 0px;
-        color: black; 
-        font-size: 2rem; */
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
-        z-index: 1;
-    }
+   
     .menu-controller:active .mmm-m{
         display: block;
     }
