@@ -52,9 +52,10 @@ const Course = () => {
 return (     
     <main className='course-container'>
         <Slider {...settings}>
-            {DummySchedule.map((s) => {
+            {DummySchedule && DummySchedule.map((s,i) => {
                 return (
                     // <StyledLink to='/announce'>
+                    <div key={i}>
                         <CourseItem  
                             id={s.id}               
                             title={s.title}
@@ -63,7 +64,7 @@ return (
                             time={s.time}
                             date={s.date}
                             location={s.location}
-                        />
+                        /></div>
                     // </StyledLink>
                 )
             })}

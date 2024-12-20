@@ -17,7 +17,10 @@ const MainNavigation = (props) => {
         </div> 
 
         <div className='nav-title-container'>  
-          <h1>Гандан<span>тэгчэнлин хийд</span></h1>
+          {/* <h1>Гандан<span>тэгчэнлин хийд</span></h1> */}
+          <h1 className='gandantegchenlin'>Гандантэгчэнлин хийд</h1>
+          <h2 className='gandan-hiid'>Гандан Хийд</h2>
+          <h3 className='gandan'>Гандан</h3>
           <p >Mongolian National Buddhist Center</p>
         </div>
 

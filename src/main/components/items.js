@@ -13,7 +13,6 @@ const Items = props => {
         <img 
           src={props.image} 
           alt={props.alt}
-          className='images'
         />
       </div> 
 

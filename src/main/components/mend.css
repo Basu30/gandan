@@ -1,0 +1,37 @@
+.main-mend-container {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: auto;
+    text-align: center;
+   
+    
+}
+.mend-img{
+    width: 100%;
+    height: auto;
+}
+
+
+img{
+    width:100%;
+    border-radius: 1%;   
+}
+
+@media (max-width: 768px) {
+    .main-mend-container h4{
+        font-size: 5px;
+    }
+    .main-mend-container p{
+        font-size: 3px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-mend-container h4{
+        font-size: 8px;
+    }
+    .main-mend-container p{
+        font-size: 6px;
+    }
+}

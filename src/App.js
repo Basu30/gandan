@@ -66,10 +66,10 @@ const App = () => {
   return (
     <AuthContext.Provider value={{isLoggedIn: isLoggedIn, login: login, logout: logout}}>
       <Router>
-        <MainNavigation />
+        <MainNavigation />    
           <Switch>    
             {routes} 
-          </Switch>      
+          </Switch>  
       </Router>  
     </AuthContext.Provider>
   );
