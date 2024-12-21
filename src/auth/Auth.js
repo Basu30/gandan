@@ -37,15 +37,16 @@ const Login = () => {
     auth.login();
   }
   return (
-    <div className='container'>    
-      <div className='login-form'>
-        
+    <main className='login-auth-container'>     
+ 
+      <div className='login-auth-form'>
+       
         <div className='login-img-container'>
-          <img src="image\wheel.jpg" alt="gate" className='picture'/>
+          <img src="image\wheel.jpg" alt="gate"/>
         </div>
         
 
-        <form  onSubmit={submitHandler} className='form-container'>     
+        <form  onSubmit={submitHandler} className='auth-form-container'>     
           <div className='container-u-p'>
 
             <label htmlFor="email"><b>Email </b></label> 
@@ -85,7 +86,7 @@ const Login = () => {
           </div>         
         </form>       
       </div>
-    </div>  
+    </main>  
   )
 }
 

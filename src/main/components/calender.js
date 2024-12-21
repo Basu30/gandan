@@ -4,14 +4,16 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar/DateCalendar';
 
+
+
 import './calendar.css';
 
 const Calender = () => {
   return (
-    <main > 
+    <main className='cale-container'> 
       <h1>Calender</h1>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DateCalendar  className='dates'/>
+        <DateCalendar  className='cale-date'/>
       </LocalizationProvider>
     </main>
   )

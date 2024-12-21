@@ -4,8 +4,11 @@ import Button from '@mui/material/Button';
 import { AuthContext } from '../../context/auth-context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { MdPostAdd } from "react-icons/md";
+import { FiEdit } from "react-icons/fi";
 
 import './navLinks.css';
+
 
 
 const NavLinks = () => {
@@ -24,19 +27,21 @@ const NavLinks = () => {
       <NavLink to='/news' style={{textDecoration: 'none'}}>
         <div className='addNews-container'>
          <p style={{margin: '0px'}}>Мэдээ нэмэх</p>
+         <MdPostAdd id="Md-postAdd" title='Мэдээ нэмэх'/>
         </div>
       </NavLink>}
       {auth.isLoggedIn && 
       
       <NavLink to='/update' style={{textDecoration:'none'}}>
-        <div className='updateNews-container'>
-        <p >Засварлах</p>
+        <div className='updateNews-container' >
+        <p>Засварлах</p>
+        <FiEdit id="fa-edit" title="Мэдээ засварлах"/>
         </div>
       </NavLink> }
      
       <NavLink to='/auth'>
-        <Button id='login-button-cont' variant='contained'>Login</Button>
-        <FontAwesomeIcon icon={faUser} className='font-controller'/>
+        {!auth.isLoggedIn && <Button id='login-button-cont' variant='contained'>Login</Button>}
+        {!auth.isLoggedIn && <FontAwesomeIcon icon={faUser} className='font-controller'/>}
       </NavLink>  
     </div>       
   )

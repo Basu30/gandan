@@ -4,7 +4,7 @@
  
     padding: 2px;
     border: 4px solid black;
-    height:815px;
+    height:85vh;
     overflow: hidden;
 
 }
@@ -63,6 +63,7 @@
         border: none;
         display:flex;
         flex-direction: column;
+        height: auto;
     }
     .section-1,
     .section-3  {
@@ -77,6 +78,15 @@
     }
     #icon-button {
         display: block;
+        width: 20%;
+      
+        border-radius: 0px;
     }
     
+}
+@media(max-width: 992px) and (min-width: 769px){
+    .home{
+        display: flex;
+        
+    }
 }

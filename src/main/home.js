@@ -103,7 +103,7 @@ export default function Home() {
               color="inherit"
               aria-label="open drawer"
               onClick={handleDrawerOpen}
-              edge="start"
+              
               sx={[
                 { mr: 2, },               
                 open && { display: 'none' },

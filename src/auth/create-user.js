@@ -32,12 +32,12 @@ const CreateUser = () => {
   return (
     <main> 
       <h1 className='h-1'>Create a new account</h1>  
-    <div className='user-container'>     
-      <div className='login-form'>
+    <div className='create-user-container'>     
+      <div className='create-login-form'>
         
         {/* Image */}
         <div className='signup-img-container'>
-          <img src="image\wheel.jpg" alt="gate" className='picture'/>
+          <img src="image\wheel.jpg" alt="gate" />
         </div>
         
         {/* Form */}
