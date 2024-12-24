@@ -1,10 +1,9 @@
 .home {
     background-color: rgb(197, 214, 250);
     display: flex;
- 
     padding: 2px;
     border: 4px solid black;
-    height:85vh;
+    max-height:85vh;
     overflow: hidden;
 
 }
@@ -22,8 +21,9 @@
 } */
 
 .section-1 {
-    display: block;
-    width:20%;
+    display: inline-block;
+    width:25%;
+    height:auto;
     border-radius: 10px;
     margin: 6px;
     padding: 20px;
@@ -33,7 +33,7 @@
     box-shadow: 1px 0.1px 8px 1px rgb(116, 115, 115);
 }
 .section-2 {
-    width: 75%;
+    width: 100%;
     margin: 0px;
     text-align: center;
     overflow: scroll;
@@ -41,10 +41,18 @@
 }
 
 .section-3 {
-    width:20%;
-    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:17%;
+    margin: 0px;
+    border: 2px solid black;
     text-align: center;
-    
+}
+.cali-controller{
+    /* border: 2px solid black; */
+    padding: 10px ;
+  
 }
 
 .cali-container {
@@ -52,25 +60,32 @@
     background-color: blanchedalmond;
     box-shadow: 0px ;
     padding:0px;
-    margin: 10px;
     box-shadow: 1px 0.1px 8px 1px rgb(116, 115, 115);
+     /* height: 400px; */
+}
+
+.home-course-container{
+    display: inline-block;
+    justify-content: center;
+    width:100%;
+    height: auto;
+    /* border: 2px solid black */
 }
 
 
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .home{
         border: none;
         display:flex;
         flex-direction: column;
-        height: auto;
+        /* height: auto; */
     }
     .section-1,
     .section-3  {
         display: none;
     }
-    .section-2 {
-        width: 100%;
+    .section-3 h3{
+        font-size: small;
     }
    
     .menu-controller:active .mmm-m{
@@ -79,14 +94,24 @@
     #icon-button {
         display: block;
         width: 20%;
-      
         border-radius: 0px;
     }
     
 }
-@media(max-width: 992px) and (min-width: 769px){
+@media(max-width: 1250px) and (min-width: 769px){
     .home{
         display: flex;
-        
+    } 
+  
+    .cali-container,
+    .cali-controller{
+        height:60px;
+    }
+   
+    .section-3 h3{
+        font-size: smaller;
+    }
+    .home-course-container{
+        width: 100%
     }
 }

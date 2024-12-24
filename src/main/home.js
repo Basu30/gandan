@@ -183,12 +183,18 @@ export default function Home() {
             </section>
 
             <section className="section-3">
-                <div className="cali-container">
-                  <Calender />    
+                <div className="cali-controller">
+                  <div className="cali-container">
+                    <Calender />    
+                  </div>
                 </div>
+                
+                <h3 style={{marginBottom: '0px'}}>Course Schedule</h3> 
 
-                <h3 style={{marginBottom: '0px'}}>Course Schedule</h3>                                          
-                  <Course />         
+                <div className="home-course-container">                                                        
+                  <Course /> 
+                </div>
+                        
             </section>        
         </main>
         </Box>
