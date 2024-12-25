@@ -59,7 +59,7 @@ const CourseItem = course => {
         <Box sx={style}>
 
         <Typography id="modal-modal-title" variant="h6" component="h2">
-          <h1 className='title' style={{fontSize: '30px'}}>{course.title}</h1>
+          <h1 className='title' style={{fontSize: '35px'}}>{course.title}</h1>
           <p>Товч танилцуулга</p>
           <p>{nom}</p>
           <p className='location'>Энэхүү номыг Гандантэгчэнлин хийдийн дэд хамба Гантөмөр айлдана. Ном 7 хоног үргэлжилэнэ. </p>
