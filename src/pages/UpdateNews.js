@@ -3,9 +3,13 @@ import React from 'react';
 import Input from '../shared/components/FormElements/input'
 import { VALIDATOR_REQUIRE } from '../shared/util/validators';
 import { Button } from '@mui/material';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from '../shared/hooks/form-hook';
 
 import './UpdateNews.css';
+
 
 const UpdateNews = () => {
 
@@ -35,7 +39,10 @@ return(
 
 
         <main className='update-form'>
-            <h1>This is Edit page</h1>
+
+            <Link to='/'><FontAwesomeIcon icon={faArrowLeft} className='font-controller-announce'/></Link>
+            
+            <h1>This is Edit page</h1>         
             <div className='update-form-container'>
 
             <form onSubmit={submitHandler} className='form-controllor'>

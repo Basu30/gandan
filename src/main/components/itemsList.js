@@ -5,6 +5,7 @@ import './itemsList.css';
 import Card from '../../shared/components/UIElements/Card';
 
 
+
 const ItemList = props => {
 
   if (props.articles.length === 0){
@@ -22,10 +23,10 @@ const ItemList = props => {
       {props.articles.map(article => (
         <Items 
           key={article.id}
-          id={article.id}
+          id={article.id} 
           name={article.name}
           image={article.image}
-          Url={article.url}
+          Url={article.url}   
         />
       ))}
     </div>

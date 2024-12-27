@@ -13,6 +13,7 @@ import { AuthContext } from "./shared/context/auth-context";
 import './App.css';
 
 
+
 const App = () => {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -36,8 +37,11 @@ const App = () => {
         <Route path='/news' exact>
           <NewsItem />
         </Route>
-        <Route path='/update' exact>
+        <Route path='/update/:id' exact>
           <UpdateNews />
+        </Route>
+        <Route path='/announce/:newsId' exact>
+          <Announce />
         </Route>
         
         <Redirect to="/" /> 
@@ -55,7 +59,7 @@ const App = () => {
         <Route path='/createUser' exact>
           <CreateUser />
         </Route>
-        <Route path='/announce' exact>
+        <Route path='/announce/:newsId' exact>
           <Announce />
         </Route>
 

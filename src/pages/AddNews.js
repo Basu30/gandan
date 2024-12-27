@@ -3,6 +3,9 @@ import { useForm } from '../shared/hooks/form-hook';
 import Input from '../shared/components/FormElements/input';
 import { VALIDATOR_REQUIRE } from '../shared/util/validators';
 import { Button } from '@mui/material';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 import './AddNews.css'
 
@@ -31,8 +34,11 @@ const AddNews = () => {
 
     return (  
         <main className='news-container'> 
+          <Link to='/'><FontAwesomeIcon icon={faArrowLeft} className='font-controller-announce'/></Link>
             <h1>Шинэ мэдээ нэмэх</h1>  
+          
             <div className='news-form-container'> 
+            
             <form onSubmit={addHandler} className='news-form'>
                 <Input 
                   element="input" 
