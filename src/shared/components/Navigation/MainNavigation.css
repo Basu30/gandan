@@ -69,12 +69,18 @@
   .main-nav-container {
     display: flex;
   }
+  .nav-title-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
   .nav-title-container h3{
     font-size: 1.8rem;
     font-weight: 400;
-    display: block;
+    display:flex;
+    justify-content: center;
     line-height: 0.2;
-   
+    padding-left: 30px;
   }
   .nav-title-container h1,
   .nav-title-container h2,

@@ -49,8 +49,26 @@
     font-weight: bold;
 }
 
-
-
+.modal-modal-title{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+.modal-modal-title h1{
+    font-size: 35px;
+}
+.modal-modal-title p{
+    padding: 10px
+}
+.modal-modal-date{
+    
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+.modal-modal-location{
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
 .location {
     background-color: rgb(230, 76, 76);
     height: 10%;
@@ -59,28 +77,61 @@
     padding: 8px;
     color: white
 }
+.box-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box-controller{
 
-@media (max-width: 1280px) {
+    border-radius: 10px;
+    background-color: rgb(223, 202, 149);
+    width: 1000px;
+}
+
+@media (max-width: 768px) {
     .main-container{
-        width: 100%;
-        height: 50%; 
+       width: 100%;
+       height: 400px;
     }
-    /* .d-d-t,
-    .location{
-        display: none;
-    } */
+    .box-controller{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 80%;
+        overflow: scroll;       
+       
+    }
+    .modal-modal-title h1{
+        font-size: 20px;
+    }
+    .modal-modal-date,
+    .modal-modal-location,
+    .modal-modal-title{
+        font-size: 1.1rem;
+        
+    }
+   
     .images-course{
         width: 50%;
-        /* height: 40%; */
     }
     .title{
-        font-size: small;
+        font-size: xx-large;
     }
-}
-@media (max-width: 1400px) {
-    .d-d-t,
-    .location
-    {
-       display: none;
+}@media(max-width: 1380px )and (min-width: 769px){
+    .box-controller{
+        width: 100%;
+        height: auto;
+        overflow: scroll;    
     }
+    .modal-modal-date,
+    .modal-modal-location,
+    .modal-modal-title{
+        font-size: 1.1rem;
+        
+    }
+   
 }

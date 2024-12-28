@@ -51,11 +51,11 @@ const Course = () => {
 
 return (     
     <main className='course-container'>
-        <Slider {...settings}>
+        <Slider {...settings} className='slider-container'>
             {DummySchedule && DummySchedule.map((s,i) => {
                 return (
                     // <StyledLink to='/announce'>
-                    <div key={i}>
+                    <div key={i} >
                         <CourseItem  
                             id={s.id}               
                             title={s.title}

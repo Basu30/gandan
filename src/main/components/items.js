@@ -19,7 +19,7 @@ const Items = props => {
 
       <div className='names-title'>
         
-        <div className='names'>
+        <div className='names' data-fulltext="Full name here" tabindex="0" aria-label="Full name here">
           {props.name}
         </div>
          

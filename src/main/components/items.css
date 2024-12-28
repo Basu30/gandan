@@ -26,13 +26,21 @@
 }
 
 .names-title {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(158, 134, 134);
     border-radius: 0px 0px 10px 10px;
+   
 }
 .names {
     width: 100%;
-    font-size: xx-large;
-    padding: 10px;
+   
+    white-space: nowrap;
+    font-size: 1.5rem;
+    /* padding: 10px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
 
 }
 

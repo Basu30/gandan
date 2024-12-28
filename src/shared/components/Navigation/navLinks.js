@@ -39,7 +39,7 @@ const NavLinks = () => {
       <NavLink to='/news' style={{textDecoration: 'none'}}>
         <div className='addNews-container'>
          <p style={{margin: '0px'}}>Мэдээ нэмэх</p>
-         <MdPostAdd id="Md-postAdd" title='Мэдээ нэмэх'/>
+         <MdPostAdd id="Md-postAdd" title='Мэдээ нэмэх' style={{fontSize:'1.5rem', margin: '2px'}}/>
         </div>
       </NavLink>}
       {/* {auth.isLoggedIn && 
@@ -53,7 +53,7 @@ const NavLinks = () => {
       <NavLink to='/auth'>
         {!auth.isLoggedIn && <Button id='login-button-cont' variant='contained'>Login</Button>}
         {!auth.isLoggedIn && <FontAwesomeIcon icon={faUser} className='font-controller'/>}
-        {auth.isLoggedIn && <FontAwesomeIcon icon={faRightFromBracket} onClick={handleLogout} style={{fontSize: '1.5rem'}}/>}
+        {auth.isLoggedIn && <FontAwesomeIcon icon={faRightFromBracket} onClick={handleLogout} style={{fontSize: '1.2rem', margin: '2px'}}/>}
 
       </NavLink>  
     </div>       

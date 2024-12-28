@@ -74,7 +74,7 @@ const Login = () => {
             />
             <div style={{textAlign: 'end', marginTop: '-10px', marginBottom: '15px'}}><a href='/' style={{textDecoration: 'none'}}>Forgot password</a></div>
 
-            <Button type="submit" disabled={!formState.isValid} variant='contained' style={{marginTop: '4px'}}>Login</Button>
+             <Button type="submit"  variant='contained' style={{marginTop: '4px'}}>Login</Button>  {/* disabled={!formState.isValid} */}
 
             <div className="check">
               <input element="input" type="checkbox" name="remember"/> Remember me

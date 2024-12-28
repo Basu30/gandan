@@ -53,31 +53,33 @@ const CourseItem = course => {
     <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+        // aria-labelledby="modal-modal-title"
+        // aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        {/* <div className='box-container'> */}
+        <Box sx={style} className="box-controller">
 
-        <Typography id="modal-modal-title" variant="h6" component="h2">
-          <h1 className='title' style={{fontSize: '35px'}}>{course.title}</h1>
-          <p>Товч танилцуулга</p>
+        <div class="modal-modal-title" variant="h6" component="h2">
+          <h1 className='title' >{course.title}</h1>
+          <p>Товч танилцуулга:</p>
           <p>{nom}</p>
           <p className='location'>Энэхүү номыг Гандантэгчэнлин хийдийн дэд хамба Гантөмөр айлдана. Ном 7 хоног үргэлжилэнэ. </p>
-        </Typography>
+        </div>
 
-          <Typography id="modal-modal-title" variant="h6" component="h2" sx={{mt: 2}}>
+          <div className="modal-modal-date" variant="h6" component="h2" sx={{mt: 2}}>
             <div className='d-d-t'>
               <div className='day'>Өдөр: {course.day}</div>
               <div className='date'>Огноо: {course.date}</div>
               <div className='time'>Цаг: {course.time}</div>
             </div>
-          </Typography>
+          </div>
 
-          <Typography id="modal-modal-title" variant="h6" component="h2" sx={{ mt: 2 }}>
+          <div className="modal-modal-location" variant="h6" component="h2" sx={{ mt: 2 }}>
             <div className='location'>Хаана: {course.location}</div>
-          </Typography>
+          </div>
 
         </Box>
+        {/* </div> */}
       </Modal>
     </React.Fragment>
   )

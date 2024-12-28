@@ -11,6 +11,7 @@ import { AuthContext } from "./shared/context/auth-context";
 
 
 import './App.css';
+import Course from './main/components/course';
 
 
 
@@ -37,7 +38,7 @@ const App = () => {
         <Route path='/news' exact>
           <NewsItem />
         </Route>
-        <Route path='/update/:id' exact>
+        <Route path='/update/:newsId' exact>
           <UpdateNews />
         </Route>
         <Route path='/announce/:newsId' exact>
@@ -61,6 +62,9 @@ const App = () => {
         </Route>
         <Route path='/announce/:newsId' exact>
           <Announce />
+        </Route>
+        <Route path='/course' exact>
+          <Course />
         </Route>
 
         <Redirect to="/auth" /> 

@@ -95,8 +95,17 @@
     .addNews-container{
         background-color: transparent;
         box-shadow: none;
-        margin: 0px -10px;
-        display: inline;
+        margin: 0px ;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        /* border: 2px solid black; */
+        width: auto;
+    }
+    .nav-control{
+        display: flex;
+        align-items: center;
+        /* border: 2px solid black; */
     }
 
 }
