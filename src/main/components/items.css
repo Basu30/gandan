@@ -5,7 +5,7 @@
     width: 400px;
     height: auto;
     background-color: bisque;
-    margin:10px;
+    margin:15px 15px;
     border-radius: 10px;
     box-shadow: 1px 0.1px 8px 1px rgb(116, 115, 115);
     /* transition: transform .2s; */
@@ -76,19 +76,16 @@
 
 @media (max-width: 768px) {
     .item-container{
-        width: 80%;
+        width: 90%;
 
     }
     .images-container{
        width: 100%;
     }
 }
-@media (max-width: 992px) {
+@media (max-width: 1380px) and (min-width: 769px) {
     .item-container{
         display: flex;
-        
-    }
-    .images-container{
-       width: 100%;
+        width: 90%
     }
 }

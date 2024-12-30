@@ -8,11 +8,21 @@
     background-color: black;
 } */
 
-@media (max-width:1050px) {
+@media (max-width:1368px) {
     .items {
         display: flex;
         flex-direction: column;
         width: 100%;
         align-items: center;
+        /* border: 2px solid black */
+    }
+}
+
+@media (max-width: 1870px) and (min-width: 1369px){
+    .items{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+        width: 100%
     }
 }
