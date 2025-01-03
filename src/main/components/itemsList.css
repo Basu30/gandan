@@ -18,7 +18,7 @@
     }
 }
 
-@media (max-width: 1870px) and (min-width: 1369px){
+@media (max-width: 1970px) and (min-width: 1369px){
     .items{
         display: grid;
         grid-template-columns: auto auto;
