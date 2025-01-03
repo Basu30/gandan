@@ -11,9 +11,7 @@
 .mmm-m {
     display: none;
 }
-.h1-text {
-    /* color: black; */
-}
+
 /* img{
     width:20rem;
     border-radius: 5%;
@@ -123,11 +121,3 @@
     }
 }
 
-/* @media (max-width: 1870px) and (min-width: 1381px) {
-    .section-2 {
-        display: flex;
-        justify-content: space-evenly;
-        padding: 24px;
-        border: 2px solid black;
-    }
-} */

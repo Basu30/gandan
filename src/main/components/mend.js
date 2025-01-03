@@ -19,7 +19,7 @@ const Mend = () => {
     return (
         <main className='main-mend-container'>
             <div className='mend-img'>
-                <img src="image\Богд Жэвзүндамба.jpg" alt="10th His Holiness Bogd Jevzundamda"/>
+                <img src="/image/Богд Жэвзүндамба.jpg" alt="10th His Holiness Bogd Jevzundamda"/>
             </div>
             
 

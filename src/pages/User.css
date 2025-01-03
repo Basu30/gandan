@@ -1,0 +1,41 @@
+.user-face-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.user-controller{
+    width: 50%;
+   
+}
+
+.user-interface-controller{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color:rgb(223, 202, 149) ;
+    text-decoration: none;
+}
+
+.user-interface-controller:hover {
+    background-color: rgb(246, 198, 85);
+}
+
+.user-post-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgb(249, 231, 187);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+@media(max-width: 768px){
+    .user-controller{
+        width: 80%
+    }
+}

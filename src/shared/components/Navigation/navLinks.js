@@ -28,11 +28,11 @@ const NavLinks = () => {
   return (
     <div className='nav-control'>
       
-      {/* <NavLink to='/'>
+      <NavLink to='/user'>
       <div className='home-container'>
-        Home
+        User
         </div>
-      </NavLink> */}
+      </NavLink>
       
       {auth.isLoggedIn &&
       

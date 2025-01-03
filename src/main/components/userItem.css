@@ -1,0 +1,35 @@
+.user-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    color: brown
+}
+
+.user-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    border: 2px solid black;
+    padding: 24px
+}
+
+.user-form textarea{
+    width: 99.5%;
+}
+
+.user-form button{
+    margin-top: 10px
+}
+
+@media (max-width: 768px) {
+    .user-form-container{
+        width: 70%
+    }
+    
+}

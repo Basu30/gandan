@@ -7,11 +7,15 @@ import NewsItem from './pages/AddNews';
 import CreateUser from "./auth/create-user";
 import UpdateNews from "./pages/UpdateNews";
 import Announce from "./pages/Announce";
+import Calender from './main/components/calender';
+import User from './pages/User';
+import UserItem from './main/components/userItem';
 import { AuthContext } from "./shared/context/auth-context";
 
 
 import './App.css';
 import Course from './main/components/course';
+import Mend from './main/components/mend';
 
 
 
@@ -66,13 +70,25 @@ const App = () => {
         <Route path='/course' exact>
           <Course />
         </Route>
-
+        <Route path='/mend' exact>
+          <Mend />
+        </Route>
+        <Route path='/calendar' exact>
+          <Calender />
+        </Route>
+        <Route path='/user' exact>
+          <User />
+        </Route>
+        <Route path='/userItem' exact>
+          <UserItem />
+        </Route>
+        
         <Redirect to="/auth" /> 
       </Switch>
     )
   }
   return (
-    <AuthContext.Provider value={{isLoggedIn: isLoggedIn, login: login, logout: logout}}>
+    <AuthContext.Provider value={{isLoggedIn: isLoggedIn, login: login, logout: logout}} >
       <Router>
         <MainNavigation />    
           <Switch>    
