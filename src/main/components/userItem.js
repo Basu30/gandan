@@ -51,7 +51,7 @@ const UserItem = () => {
       <div className='user-form-container'>
 
         <form onSubmit={submitHandler} className='user-form'>
-          <input type="text" id='title' placeholder='Post title'  onChange={inputHandler}/>
+          <input type="text" id='title' placeholder='Post title (Optional)'  onChange={inputHandler}/>
           <textarea id='post' placeholder='Write your post...'  onChange={inputHandler} className='user-textarea'/>
           <input type="file" id='file'  accept='image/*,video/*' onChange={fileHandler}/>
           <Button type="submit" variant='contained'>Post</Button>
