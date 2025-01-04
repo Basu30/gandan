@@ -1,0 +1,82 @@
+.main-secNav{
+    display:flex;
+    align-items: center;
+    height: 35px;
+   
+}
+ .main-secNav-ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;  
+    height: 35px;
+}
+
+.secNav-name-container p{
+    margin:7px 8px;
+}
+
+.secNav-name-container{
+    display: flex;
+    width: 100%;
+    color: white;
+}
+
+.secNav-datsan, 
+.secNav-alba{
+    cursor: pointer;
+    caret-color: transparent;  
+    transition: all 0.5s ease;
+    padding: 0px 10px
+}
+.secNav-alba:hover, 
+.secNav-datsan:hover{
+    background-color: rgb(37, 106, 218);
+}
+.drop-datsan, .drop-alba {
+    display: none;
+    position:absolute;
+    border-radius:0px 0px 10px 10px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.drop-datsan.show, 
+.drop-alba.show {
+    display: block; /* Show dropdown when active */
+}
+  
+.drop-datsan.hide, 
+.drop-alba.hide {
+    display: none; /* Explicitly hide inactive dropdowns */
+}
+  
+/* dropdown-link styles */
+#dropdown-link{
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+  
+#dropdown-link:hover {
+    background-color: gray;
+    color: white;
+}
+  
+#dropdown-link{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+@media (max-width: 768px){
+    .main-secNav-ul{
+        padding: 0px
+    }
+}

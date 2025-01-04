@@ -29,8 +29,8 @@ const NavLinks = () => {
     <div className='nav-control'>
       
       <NavLink to='/user'>
-      <div className='home-container'>
-        User
+        <div className='home-container'>
+          User
         </div>
       </NavLink>
       

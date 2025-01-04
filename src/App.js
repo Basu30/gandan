@@ -10,12 +10,20 @@ import Announce from "./pages/Announce";
 import Calender from './main/components/calender';
 import User from './pages/User';
 import UserItem from './main/components/userItem';
+import SecondNav from './shared/components/Navigation/SecondNav';
+import Tsogchen from './pages/datsan/tsogchen';
 import { AuthContext } from "./shared/context/auth-context";
 
 
 import './App.css';
 import Course from './main/components/course';
 import Mend from './main/components/mend';
+import BadmaYoga from './pages/datsan/badma';
+import Dashichoimbol from './pages/datsan/dashi';
+import Gungaa from './pages/datsan/gunga';
+import Idgaa from './pages/datsan/idga';
+import Janraisig from './pages/datsan/janraisig';
+import Mamba from './pages/datsan/mamba';
 
 
 
@@ -82,6 +90,27 @@ const App = () => {
         <Route path='/userItem' exact>
           <UserItem />
         </Route>
+        <Route path='/tso' exact>
+          <Tsogchen />
+        </Route>
+        <Route path='/badma' exact>
+          <BadmaYoga />
+        </Route>
+        <Route path='/dashi' exact>
+          <Dashichoimbol />
+        </Route>
+        <Route path='/gunga' exact>
+          <Gungaa />
+        </Route>
+        <Route path='/idga' exact>
+          <Idgaa />
+        </Route>
+        <Route path='/jan' exact>
+          <Janraisig />
+        </Route>
+        <Route path='/mam' exact>
+          <Mamba />
+        </Route>
         
         <Redirect to="/auth" /> 
       </Switch>
@@ -90,7 +119,8 @@ const App = () => {
   return (
     <AuthContext.Provider value={{isLoggedIn: isLoggedIn, login: login, logout: logout}} >
       <Router>
-        <MainNavigation />    
+        <MainNavigation />   
+        <SecondNav /> 
           <Switch>    
             {routes} 
           </Switch>  

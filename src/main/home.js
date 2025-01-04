@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ItemList from "./components/itemsList";
 import Calender from "./components/calender";
 import Course from "./components/course";
@@ -89,7 +89,7 @@ const drawerWidth = 140;
   
 
 export default function Home() {
-
+    const clickRef = useRef(null);
   
     const theme = useTheme();
     const [open, setOpen] = useState(false);
@@ -102,7 +102,20 @@ export default function Home() {
       setOpen(false);
     };
 
-
+     //Close the dropdown when clicking outside
+    useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (clickRef.current && !clickRef.current.contains(event.target)){
+          setOpen(null) // close the dropdown
+        }
+      };
+        // Add event listener to the document
+      document.addEventListener("mousedown", handleClickOutside);
+      // Cleanup the event listener when component unmounts;
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };  
+    }, []);
 
 
     return (
@@ -111,7 +124,7 @@ export default function Home() {
               color="inherit"
               aria-label="open drawer"
               onClick={handleDrawerOpen}
-              
+              ref={clickRef}
               sx={[
                 { mr: 2, },               
                 open && { display: 'none' },
@@ -137,7 +150,7 @@ export default function Home() {
               open={open}
             >
             <DrawerHeader>
-              <IconButton onClick={handleDrawerClose}>
+              <IconButton  onClick={handleDrawerClose}>
                 {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
               </IconButton>
             </DrawerHeader>

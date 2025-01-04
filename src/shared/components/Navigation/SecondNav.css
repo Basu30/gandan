@@ -1,0 +1,8 @@
+.second-nav-container{
+    display: flex;
+    background-color: rgb(51, 62, 227);
+}
+
+.second-nav-container h1{
+    color: white;
+}
