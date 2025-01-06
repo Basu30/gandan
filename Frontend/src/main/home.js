@@ -161,7 +161,7 @@ export default function Home() {
               <ListItem  disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
-                    <Link to="/mend">Мэндчилгээs</Link>
+                    <Link to="/mend">Мэндчилгээ</Link>
                   </ListItemIcon>
                   <ListItemText  />
                 </ListItemButton>
