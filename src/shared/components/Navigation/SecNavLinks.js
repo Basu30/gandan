@@ -61,6 +61,19 @@ const SecNavLink = () => {
             </div>
          
         </li>
+        <li onClick={() => dropHandler("tanil")} className='secNav-alba'>
+          <div className='secNav-name-container'>
+            <p >Танилцуулга</p>
+          </div>
+             
+            <div className={`drop-alba ${drop === "tanil" ? "show" : "hide"}`}>
+              <NavLink to='/' id='dropdown-link' className='a'>Гандан хийдийн түүх</NavLink>
+              <NavLink to='/' id='dropdown-link' className='b'>Газрын зураг</NavLink>
+              <NavLink to='/' id='dropdown-link' className='c'>Монголын Бурханын шашны түүх</NavLink>
+              <NavLink to='/' id='dropdown-link' className='d'>Хэвлэл мэдээллийн алба</NavLink>
+            </div>
+         
+        </li>
       
       </ul>
      
