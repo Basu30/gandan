@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button } from '@mui/material';
 import Input from '../shared/components/FormElements/input';
 import { VALIDATOR_EMAIL, VALIDATOR_MINLENGTH, VALIDATOR_REQUIRE,} from '../shared/util/validators';
 import { useForm } from '../shared/hooks/form-hook';
 
+import { AuthContext } from '../shared/context/auth-context';
+
 import './create-user.css'
 
 
 const CreateUser = () => {
+  const auth = useContext(AuthContext);
+  // const [isLoginMode, setIsloginMode] = useState(true);
 
   const [formState, inputHandler] = useForm(
       {
+        name: {
+          value: '',
+          isValid: false
+        },
         email: {
           value: '',
           isValid: false
@@ -23,9 +31,35 @@ const CreateUser = () => {
       false
     );
 
-    const signupHandler = (event) => {
+
+    const signupHandler = async (event) => {
       event.preventDefault();
-      console.log(formState.inputs)
+      // console.log(formState.inputs)
+      // if(isLoginMode){
+      
+      // } else {
+        try {
+          const response = await fetch('http://localhost:5000/api/users/signup', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              name: formState.inputs.name.value,
+              email: formState.inputs.email.value,
+              password: formState.inputs.password.value
+            })
+          });
+  
+          const responseData = await response.json();
+          
+             console.log(responseData);
+        } catch (err) {
+          console.log(err)
+        }  
+      // };
+      
+     auth.login()
     }
 
 
@@ -46,9 +80,9 @@ const CreateUser = () => {
           <div className='signup-u-p'>
             <Input 
               element="input" 
-              id="fname" 
+              id="name" 
               type="text" 
-              label="First Name"
+              label="Name"
               autoComplete='off' 
               placeholder='Нэр оруулна уу'
               validators={[VALIDATOR_REQUIRE()]}
@@ -56,7 +90,7 @@ const CreateUser = () => {
               onInput={inputHandler}
             />
 
-            <Input
+            {/* <Input
               element="input" 
               id="lname" 
               type="text" 
@@ -66,7 +100,7 @@ const CreateUser = () => {
               validators={[VALIDATOR_REQUIRE()]}
               errorText='Please enter a valid your last name.' 
               onInput={inputHandler}
-            />
+            /> */}
 
             <Input 
               element="input" 
@@ -83,7 +117,7 @@ const CreateUser = () => {
             <Input 
               element="input" 
               id="password" 
-              type="new-password" 
+              type="password" 
               label="Password"
               autoComplete='off' 
               placeholder='Нууц үгээ оруулна уу'
@@ -92,7 +126,7 @@ const CreateUser = () => {
               onInput={inputHandler}
             />
            
-            <Input 
+            {/* <Input 
               element="input" 
               id="confirmPassword" 
               type="new-password" 
@@ -102,7 +136,7 @@ const CreateUser = () => {
               validators={[VALIDATOR_MINLENGTH(6)]}
               errorText='Password do not match' 
               onInput={inputHandler}
-            />
+            /> */}
 
             <Button type="submit" variant='contained' style={{marginTop: '10px'}}>Sign Up</Button>
 

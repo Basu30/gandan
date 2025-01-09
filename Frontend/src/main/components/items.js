@@ -5,8 +5,10 @@ import './items.css'
 
 
 const Items = props => {
+  const auth = useContext(AuthContext);
 
-  const auth = useContext(AuthContext)
+ 
+  
   return (
    
     <div className='item-container'> 
@@ -20,7 +22,7 @@ const Items = props => {
       <div className='names-title'>
         
         <div className='names' >
-          {props.name}
+          {props.title}
         </div>
          
         <div className='urls'>

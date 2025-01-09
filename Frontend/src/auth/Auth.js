@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button } from '@mui/material';
 import { VALIDATOR_EMAIL, VALIDATOR_MINLENGTH,} from '../shared/util/validators';
 import Input from '../shared/components/FormElements/input';
@@ -9,8 +9,8 @@ import './Auth.css';
 
 
 const Login = () => {
-
-  const auth = useContext(AuthContext)
+  const auth = useContext(AuthContext);
+  const [isLoginMode, setIsloginMode] = useState(true)
 
 
   const [formState, inputHandler] = useForm(
@@ -29,11 +29,36 @@ const Login = () => {
 
 
 
-
-  const submitHandler = (event) => {  // send it to backend
+  const submitHandler = async (event) => {      // send it to backend
     event.preventDefault();
+    // console.log(formState.inputs)
+
+    if(isLoginMode){
+      
+    } else {
+      try {
+        const response = await fetch('http://localhost:3000/api/users/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            // name: formState.inputs.name.value,
+            email: formState.inputs.email.value,
+            password: formState.inputs.password.value
+          })
+        });
+
+        const responseData = await response.json();
+        console.log(responseData);
+
+      } catch (err) {
+        console.log(err)
+      }  
+    };
     
-    console.log(formState.inputs)
+
+
     auth.login();
   }
   return (
@@ -65,7 +90,7 @@ const Login = () => {
             <Input 
               element="input" 
               id="password" 
-              type="current-password" 
+              type="password" 
               visible='off'
               placeholder='Нууц үгээ оруулна уу'
               validators={[VALIDATOR_MINLENGTH(6)]}
@@ -81,7 +106,7 @@ const Login = () => {
             </div>
 
             <div className='create-user'>
-              New user? <a href="/createUser" >Create new account.</a>
+              New user? <a href="/signup" >Create new account.</a>
             </div>
           </div>         
         </form>       

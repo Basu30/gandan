@@ -14,22 +14,49 @@ const AddNews = () => {
     const [formState, inputHandler ] = useForm(
         {
             title: {
+              value: '',
+              isValid: false
+            },
+            content: {
+              value: '',
+              isValid: false
+            },
+            image: {
                 value: '',
                 isValid: false
             },
-            description: {
-                value: '',
-                isValid: false
-            }
+            url: {
+              value: '',
+              isValid: false
+          }
         },
         false
     );
 
 
-    const addHandler = (event) => {
+    const addHandler = async (event) => {
         event.preventDefault();
-        alert('Are you sure!');
-        console.log(formState.inputs)
+
+        try{
+          const response = await fetch('http://localhost:5000/api/news', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            title: formState.inputs.title.value,
+            content: formState.inputs.content.value,
+            image: formState.inputs.image.value,
+            url: formState.inputs.url.value,
+          })
+        });
+        const responseData = await response.json();
+        console.log(responseData)
+        } catch (err) {
+          console.log(err)
+        }
+        // alert('Are you sure!');
+        // console.log(formState.inputs)
     }
 
     return (  
@@ -53,8 +80,8 @@ const AddNews = () => {
                 />
                 <Input 
                   element="textarea"
-                  id="textarea" 
-                  type="textarea" 
+                  id="content" 
+                  type="text" 
                   label="Article"
                   autoComplete='off' 
                   placeholder='Бичвэр'
@@ -64,7 +91,7 @@ const AddNews = () => {
                 />
                 <Input 
                   element="input" 
-                  id="email" 
+                  id="image" 
                   type="file" 
                   label="Image"
                   autoComplete='off' 

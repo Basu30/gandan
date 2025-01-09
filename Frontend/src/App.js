@@ -69,7 +69,7 @@ const App = () => {
         <Route path='/auth' exact>
           <Login />
         </Route>
-        <Route path='/createUser' exact>
+        <Route path='/signup' exact>
           <CreateUser />
         </Route>
         <Route path='/announce/:newsId' exact>
